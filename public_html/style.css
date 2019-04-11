@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+section {
+    border: 1px solid red;
+    height: 200px;
+}
+nav {
+    background: gray;
+}
+
+.dropdown-button {
+    height: 50px;
+    width: 50px;
+    position: relative;
+}
+
+
+.section-one .dropdown-button img:nth-child(2) {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+.section-one .dropdown-button:hover img {
+    opacity: 1;
+}
+
+
+.section-two img:hover {
+    filter: invert(1);
+}
+
+
+
+.section-three .dropdown-button {
+    font-size: 40px;
+    padding: 5px;
+    line-height: 40px;
+    color: pink;
+}
+
+.section-three .dropdown-button:hover {
+    color: lightblue;
+}
+
+.section-four .dropdown-button-with-spans {
+    align-items: center;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50px;
+}
+
+
+.dropdown-button-with-spans {
+    align-items: center;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50px;
+    padding: 6px 0px;
+}
+
+.section-four .dropdown-button-with-spans span {
+    height: 3px;
+    background: red;
+    width: 78%;
+}
+
+
+.section-four .dropdown-button-with-spans:hover span {
+    transition: transform 1s;
+}
+
+.section-four .dropdown-button-with-spans:hover span:nth-child(1) {
+    transform: translateY(9px) rotateZ(4005deg);
+}
+
+.section-four .dropdown-button-with-spans:hover span:nth-child(2) {
+    display: none;
+}
+
+.section-four .dropdown-button-with-spans:hover span:nth-child(3) {
+    transform: translateY(-9px) rotateZ(-4005deg);
+}
+
+
+
+
+.section-five .dropdown-button-with-spans {
+    
+}
+
+.section-five .dropdown-button-with-spans span {
+    height: 3px;
+    background: red;
+    width: 78%;
+    
+    position: relative;
+}
+
+
+.section-five .dropdown-button-with-spans span::before {
+    top: -10px;
+    left: 0;
+    content: '';
+    display: block;
+    height: 3px;
+    background: red;
+    width: 100%;
+    position: absolute;
+}
+
+
+.section-five .dropdown-button-with-spans span::after {
+    bottom: -10px;
+    left: 0;
+    content: '';
+    display: block;
+    height: 3px;
+    background: red;
+    width: 100%;
+    position: absolute;
+}
+
+
+.section-five .dropdown-button-with-spans:hover span {
+    transition: transform 1s;
+}
+
+/*.section-five .dropdown-button-with-spans:hover span:nth-child(1) {
+    transform: translateY(9px) rotateZ(4005deg);
+}
+
+.section-five .dropdown-button-with-spans:hover span:nth-child(2) {
+    display: none;
+}
+
+.section-five .dropdown-button-with-spans:hover span:nth-child(3) {
+    transform: translateY(-9px) rotateZ(-4005deg);
+}*/
