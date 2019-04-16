@@ -26,36 +26,6 @@ nav {
     position: relative;
 }
 
-
-.section-one .dropdown-button img:nth-child(2) {
-    /* border: 1px solid red; */
-    position: absolute;
-    top: 0;
-    opacity: 0;
-}
-
-.section-one .dropdown-button:hover img {
-    opacity: 1;
-}
-
-
-.section-two img:hover {
-    filter: invert(1);
-}
-
-
-
-.section-three .dropdown-button {
-    font-size: 40px;
-    padding: 5px;
-    line-height: 40px;
-    color: pink;
-}
-
-.section-three .dropdown-button:hover {
-    color: lightblue;
-}
-
 .section-four .dropdown-button-with-spans {
     align-items: center;
     height: 50px;
@@ -88,7 +58,7 @@ nav {
 }
 
 .section-four .dropdown-button-with-spans:hover span:nth-child(1) {
-    transform: translateY(9px) rotateZ(4005deg);
+    transform: translateY(9px) rotateZ(45deg);
 }
 
 .section-four .dropdown-button-with-spans:hover span:nth-child(2) {
@@ -96,61 +66,49 @@ nav {
 }
 
 .section-four .dropdown-button-with-spans:hover span:nth-child(3) {
-    transform: translateY(-9px) rotateZ(-4005deg);
+    transform: translateY(-9px) rotateZ(-45deg);
 }
 
 
-
-
-.section-five .dropdown-button-with-spans {
-    
-}
-
-.section-five .dropdown-button-with-spans span {
-    height: 3px;
-    background: red;
-    width: 78%;
-    
-    position: relative;
-}
-
-
-.section-five .dropdown-button-with-spans span::before {
-    top: -10px;
-    left: 0;
-    content: '';
-    display: block;
-    height: 3px;
-    background: red;
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
     width: 100%;
-    position: absolute;
 }
 
-
-.section-five .dropdown-button-with-spans span::after {
-    bottom: -10px;
-    left: 0;
-    content: '';
-    display: block;
-    height: 3px;
-    background: red;
+li {
+    display: flex;
+    text-align: center;
+    text-transform: uppercase;
     width: 100%;
-    position: absolute;
 }
 
-
-.section-five .dropdown-button-with-spans:hover span {
-    transition: transform 1s;
+a {
+    background: #555;
+    border: 1px solid #000;
+    color: #fff !important;
+    padding: 10px;
+    text-decoration: none;
+    transition: all 0.5s;
+    white-space: nowrap;
+    width: 100%;
 }
 
-/*.section-five .dropdown-button-with-spans:hover span:nth-child(1) {
-    transform: translateY(9px) rotateZ(4005deg);
+a:hover {
+    background: #fff;
+    color: #000 !important;
+    text-decoration: none !important;
+    width: 100%;
 }
 
-.section-five .dropdown-button-with-spans:hover span:nth-child(2) {
-    display: none;
-}
+/* By default  the flex-direction on the ul is a "row" */
+/* The media query below will set the ul to a column on screens smaller than 840px */
 
-.section-five .dropdown-button-with-spans:hover span:nth-child(3) {
-    transform: translateY(-9px) rotateZ(-4005deg);
-}*/
+@media screen and (max-width: 840px){
+    ul {
+        flex-direction: column;
+    }
+}
