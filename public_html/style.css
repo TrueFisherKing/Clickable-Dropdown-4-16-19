@@ -20,56 +20,6 @@ nav {
     background: gray;
 }
 
-.dropdown-button {
-    height: 50px;
-    width: 50px;
-    position: relative;
-}
-
-.main-header .dropdown-button {
-    align-items: center;
-    height: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 50px;
-}
-
-
-.dropdown-button {
-    align-items: center;
-    height: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 50px;
-    padding: 6px 0px;
-}
-
-.main-header .dropdown-button span {
-    height: 3px;
-    background: red;
-    width: 78%;
-}
-
-
-.main-header .dropdown-button:hover span {
-    transition: transform 1s;
-}
-
-.main-header .dropdown-button:hover span:nth-child(1) {
-    transform: translateY(9px) rotateZ(45deg);
-}
-
-.main-header .dropdown-button:hover span:nth-child(2) {
-    display: none;
-}
-
-.main-header .dropdown-button:hover span:nth-child(3) {
-    transform: translateY(-9px) rotateZ(-45deg);
-}
-
-
 ul {
     display: flex;
     justify-content: space-between;
@@ -107,8 +57,110 @@ a:hover {
 /* By default  the flex-direction on the ul is a "row" */
 /* The media query below will set the ul to a column on screens smaller than 840px */
 
+.dropdown-button input {
+    display: none;
+}
+
 @media screen and (max-width: 840px){
+
+
+    nav input {
+        display: none;
+    }
+
     ul {
         flex-direction: column;
+        overflow: hidden;
+    }
+    
+    nav li {
+        height: 0;
+        transform: translateX(-100vw);
+        
+        transition: transform 0.5s;
+    }
+    
+    nav li:nth-child(1) {
+        transition: transform 0.2s;
+    }
+    
+    nav li:nth-child(2) {
+        transition: transform 0.4s;
+    }
+    
+    nav li:nth-child(3) {
+        transition: transform 0.6s;
+    }
+    
+    nav li:nth-child(4) {
+        transition: transform 0.8s;
+    }
+    
+    nav li:nth-child(5) {
+        transition: transform 1s;
+    }
+    
+    nav li:nth-child(6) {
+        transition: transform 1.2s;
+    }
+    
+    nav li:nth-child(7) {
+        transition: transform 1.4s;
+    }
+    
+    nav li:nth-child(8) {
+        transition: transform 1.6s;
+    }
+    
+    
+
+    input:checked ~ ul li  {
+        height: 40px;
+        transform: translateX(0vw);
+    }
+
+    .main-header .dropdown-button {
+        align-items: center;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 50px;
+    }
+
+
+    .dropdown-button {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        height: 50px;
+        justify-content: space-around;
+        padding: 6px 0px;
+        position: relative;
+        width: 50px;
+    }
+
+    .main-header .dropdown-button span {
+        height: 3px;
+        background: #fff;
+        width: 78%;
+    }
+
+
+    .main-header .dropdown-button span {
+        transition: transform 0.5s;
+    }
+
+    .main-header input:checked ~ .dropdown-button span:nth-child(1) {
+        transform: translateY(9px) rotateZ(45deg);
+    }
+
+    .main-header input:checked ~ .dropdown-button span:nth-child(2) {
+        display: none;
+    }
+
+    .main-header input:checked ~ .dropdown-button span:nth-child(3) {
+        transform: translateY(-9px) rotateZ(-45deg);
     }
 }
