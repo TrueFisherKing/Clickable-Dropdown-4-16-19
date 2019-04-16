@@ -26,7 +26,7 @@ nav {
     position: relative;
 }
 
-.section-four .dropdown-button-with-spans {
+.main-header .dropdown-button {
     align-items: center;
     height: 50px;
     display: flex;
@@ -36,7 +36,7 @@ nav {
 }
 
 
-.dropdown-button-with-spans {
+.dropdown-button {
     align-items: center;
     height: 50px;
     display: flex;
@@ -46,26 +46,26 @@ nav {
     padding: 6px 0px;
 }
 
-.section-four .dropdown-button-with-spans span {
+.main-header .dropdown-button span {
     height: 3px;
     background: red;
     width: 78%;
 }
 
 
-.section-four .dropdown-button-with-spans:hover span {
+.main-header .dropdown-button:hover span {
     transition: transform 1s;
 }
 
-.section-four .dropdown-button-with-spans:hover span:nth-child(1) {
+.main-header .dropdown-button:hover span:nth-child(1) {
     transform: translateY(9px) rotateZ(45deg);
 }
 
-.section-four .dropdown-button-with-spans:hover span:nth-child(2) {
+.main-header .dropdown-button:hover span:nth-child(2) {
     display: none;
 }
 
-.section-four .dropdown-button-with-spans:hover span:nth-child(3) {
+.main-header .dropdown-button:hover span:nth-child(3) {
     transform: translateY(-9px) rotateZ(-45deg);
 }
 
